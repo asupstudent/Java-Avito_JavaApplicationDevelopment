@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.asupstudent.AppTest" time="0.036" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.asupstudent.AppTest" time="0.027" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="java.class.path" value="C:\Users\admin\VSCodeProjects\avito\target\test-classes;C:\Users\admin\VSCodeProjects\avito\target\classes;C:\Users\admin\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="C:\Users\admin\VSCodeProjects\avito\target\test-classes;C:\Users\admin\VSCodeProjects\avito\target\classes;C:\Users\admin\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\admin\.m2\repository\org\jsoup\jsoup\1.17.1\jsoup-1.17.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\admin\AppData\Local\Temp\surefire13991045499188286141\surefirebooter4527490235318557913.jar C:\Users\admin\AppData\Local\Temp\surefire13991045499188286141 2023-11-28T10-28-40_712-jvmRun1 surefire8901885768272747459tmp surefire_017377100011868347411tmp"/>
+    <property name="sun.java.command" value="C:\Users\admin\AppData\Local\Temp\surefire10692420154367147666\surefirebooter2821906628714541216.jar C:\Users\admin\AppData\Local\Temp\surefire10692420154367147666 2023-11-28T10-57-31_729-jvmRun1 surefire16474629302342182075tmp surefire_0885397267620511656tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\admin\VSCodeProjects\avito\target\test-classes;C:\Users\admin\VSCodeProjects\avito\target\classes;C:\Users\admin\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\admin\VSCodeProjects\avito\target\test-classes;C:\Users\admin\VSCodeProjects\avito\target\classes;C:\Users\admin\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\admin\.m2\repository\org\jsoup\jsoup\1.17.1\jsoup-1.17.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\admin"/>
     <property name="user.language" value="ru"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\admin\AppData\Local\Temp\surefire13991045499188286141\surefirebooter4527490235318557913.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\admin\AppData\Local\Temp\surefire10692420154367147666\surefirebooter2821906628714541216.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.9+11-LTS-201"/>
