@@ -95,4 +95,11 @@
     ```java -jar .\avito-1.0.jar```
 28. Получаем 
     ```Hello World!```
-29. Продолжение следует
+29. Исправляем на правильную версию java в файле pom.xml в данном случае 17 версия
+    ```
+    <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+    ```
