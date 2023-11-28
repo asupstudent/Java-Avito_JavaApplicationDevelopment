@@ -6,10 +6,10 @@
     ```java --version```
 2. Скачиваем Maven apache-maven-3.9.5-bin.zip 
     ссылка: https://maven.apache.org/download.cgi
-    проверяем 
-    ```mvn --version```
 3. Распаковываем apache-maven-3.9.5-bin.zip в удобную папку и прописываем apache-maven-3.9.5\bin в
     ```PATH```
+    проверяем
+    ```mvn --version```
 4. Для VSCode устанавливаем плагин Extension Pack for Java + все его зависимости
 5. В VSCode (Explorer) появляется вкладка Maven
 6. В вкладке Maven нажимаем + (cоздаем проект)
