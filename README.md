@@ -1,4 +1,5 @@
-# Java-Avito_JavaApplicationDevelopment
+Руководство по настройке и запуску проекта
+
 1. Устанавливаем jdk-17_windows-x64_bin.exe (LTS) ссылка https://www.oracle.com/java/technologies/downloads/#jdk17-windows проверяем java --version
 2. Скачиваем Maven apache-maven-3.9.5-bin.zip ссылка https://maven.apache.org/download.cgi проверяем mvn --version
 3. Распаковываем apache-maven-3.9.5-bin.zip в удобную папку и прописываем apache-maven-3.9.5\bin в PATH
