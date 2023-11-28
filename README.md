@@ -67,11 +67,8 @@
     собираем jar архив 
     ```mvn package```
 24. Добавляем в pom.xml точку входа в приложение, в секцию
-    ```<plugin>```
-    c
-    ```<artifactId>maven-jar-plugin</artifactId>```
-    блок
-    ```<configuration>```
+    ```<plugin>``` c ```<artifactId>maven-jar-plugin</artifactId>``` блок ```<configuration>```
+
     ```
     <plugin>
         <artifactId>maven-jar-plugin</artifactId>
