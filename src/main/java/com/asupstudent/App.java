@@ -13,15 +13,22 @@ import org.jsoup.select.Elements;
 
 public class App 
 {
-    public static void main( String[] args ) throws IOException
+    public static void main( String[] args )
     {
         String baseUrl = "https://www.avito.ru/kulebaki/orgtehnika_i_rashodniki/printery-ASgBAgICAUSoAoQK?s=1";
         List<Card> cards = new ArrayList<>();
-        var document = Jsoup.connect(baseUrl)
-                    .timeout(0)
-                    .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 YaBrowser/23.11.0.0 Safari/537.36")
-                    .referrer("http://www.google.com")
-                    .get();
+        Document document = null;
+        try {
+             document = Jsoup.connect(baseUrl)
+                        .timeout(10 * 1000)
+                        .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 YaBrowser/23.11.0.0 Safari/537.36")
+                        .referrer("http://www.google.com")
+                        .get();
+        }
+        catch(IOException ex) {
+            System.out.println("Авито не дал ответ, нужно запустить еще раз");
+            return;
+        }
         // Нашли список карточек
         Element itemsList = document.selectFirst("div[data-marker=catalog-serp]");
         //Нашли в списке все карточки
@@ -63,6 +70,10 @@ public class App
                 // Вывод строки в CSV файл
                 printWriter.println(String.join(",", row));
             }
+        }
+        catch(IOException ex) {
+            System.out.println("Ошибка записи в CSV файл");
+            return;
         }
     }
 }
