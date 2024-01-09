@@ -1,0 +1,81 @@
+1. Устанавливаем jdk-17_windows-x64_bin.exe (LTS) ссылка https://www.oracle.com/java/technologies/downloads/#jdk17-windows проверяем java --version
+2. Скачиваем Maven apache-maven-3.9.5-bin.zip ссылка https://maven.apache.org/download.cgi проверяем mvn --version
+3. Распаковываем apache-maven-3.9.5-bin.zip в удобную папку и прописываем apache-maven-3.9.5\bin в PATH
+4. Для VSCode устанавливаем плагин Extension Pack for Java + все его зависимости
+5. В VSCode (Explorer) появляется вкладка Maven
+6. В вкладке Maven нажимаем + (создаем проект)
+7. Выбираем maven-archetype-quickstart
+8. Версия 1.4 (последняя)
+9. group id указываем com.asupstudent (группа моих проектов)
+10. artifact id указываем avito название проекта (папка с проектом)
+11. Указываем папку с проектом на диске
+12. Скачивается все необходимое
+13. По ходу установки указываем версию проекта 1.0
+14. Проверяем все что мы задавали и подтверждаем Y
+15. VSCode предложит открыть проект, открываем
+16. Проект создан
+
+16.1 Добавляем зависимовть Jsoup
+
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.17.1</version>
+    </dependency>
+
+17. См. статю про внедрение maven-assembly-plugin и maven-jar-plugin для создание автономного Jar архива с зависимостями
+17.1 Пример
+/**************************************************************************/
+	<build>
+	    <plugins>
+	        <plugin>
+	            <artifactId>maven-assembly-plugin</artifactId>
+	            <configuration>
+	                <archive>
+	                    <manifest>
+	                        <mainClass>com.asupstudent.App</mainClass>
+	                    </manifest>
+	                </archive>
+	                <descriptorRefs>
+	                    <descriptorRef>jar-with-dependencies</descriptorRef>
+	                </descriptorRefs>
+	            </configuration>
+	            <executions>
+	                <execution>
+	                    <id>make-assembly</id>
+	                    <phase>package</phase>
+	                    <goals>
+	                        <goal>single</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	        </plugin>
+	        <plugin>
+	            <artifactId>maven-jar-plugin</artifactId>
+	            <configuration>
+	                <archive>
+	                    <manifest>
+	                        <addClasspath>true</addClasspath>
+	                        <classpathPrefix>lib/</classpathPrefix>
+	                        <mainClass>com.asupstudent.App</mainClass>
+	                    </manifest>
+	                </archive>
+	            </configuration>
+	        </plugin>
+	    </plugins>
+	</build>
+/**************************************************************************/
+18. Важно заменить com.example.MainClass (1 вхождение <mainClass>com.asupstudent.App</mainClass> 2 вхождение <mainClass>com.asupstudent.App</mainClass>)
+19. Сборка Jar архива 
+	mvn clean compile assembly:single
+20. Запуск
+	java -jar avito-1.0-jar-with-dependencies.jar
+
+/******************Сборка без зависимостей, возможно и не нужно будет****************/
+17. Компилируем проект команда mvn compile
+18. Собираем jar архив команда mvn package
+19. Запуск команда java -cp .\target\avito-1.0.jar com.asupstudent.App
+	-cp  (classpath) указываем, что классы нужно искать в jar файле, дополнительноу указываем com.asupstudent.App, где находится точка входа в приложение (метод main)
+/************************************************************************************/
+
+20. Получаем в консоли Hello World!
